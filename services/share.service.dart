@@ -65,4 +65,8 @@ class ShareService extends XService {
   shareTinyApp () {
 
   }
+
+  auth ({String scope = '', String state = ''}) {
+
+  }
 }
