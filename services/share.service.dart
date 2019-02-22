@@ -1,5 +1,5 @@
 
-import 'package:yujianpai/midwares/x/service.x.dart';
+import 'x/service.x.dart';
 
 class ShareService extends XService {
   String appId;

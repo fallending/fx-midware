@@ -1,5 +1,5 @@
 
-import 'package:yujianpai/midwares/x/object.x.dart';
+import 'object.x.dart';
 
 
 class XService extends XObject {
