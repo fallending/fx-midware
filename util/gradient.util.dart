@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import 'color.util.service.dart';
+import 'color.util.dart';
 
 class GradientUtil {
   static LinearGradient _getLinearGradient(Color left, Color right,

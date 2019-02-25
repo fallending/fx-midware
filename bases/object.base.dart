@@ -2,7 +2,7 @@
 
 typedef void Callback(Object obj);
 
-class XObject {
+class BaseObject {
   Object configData = null;
 
   // 模块化

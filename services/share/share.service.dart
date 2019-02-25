@@ -1,7 +1,7 @@
 
-import 'x/service.x.dart';
+import '../../bases/object.base.dart';
 
-class ShareService extends XService {
+class ShareService extends BaseObject {
   String appId;
 
   ShareService() {
