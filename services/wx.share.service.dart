@@ -6,7 +6,7 @@ import 'package:fluwx/fluwx.dart' as fluwx;
  * @refer https://www.jianshu.com/p/cf98729388b8
  */
 class WxShareService extends ShareService {
-  fluwx.Fluwx _fluwx = new fluwx.Fluwx();
+//  fluwx.Fluwx _fluwx = new fluwx.Fluwx();
 
   WxShareService () {
 
@@ -16,12 +16,12 @@ class WxShareService extends ShareService {
   void config({Object data, String appId}) {
     super.config(data: data, appId: appId);
 
-    fluwx.Fluwx.register(appId:"wxd930ea5d5a258f4f");
+    fluwx.register(appId:"wxd930ea5d5a258f4f");
   }
 
   // 这是暂时的策略
-  fluwx.Fluwx get() {
-    return this._fluwx;
+  Stream respond() {
+    return fluwx.responseFromAuth;
   }
 
   @override
@@ -31,9 +31,9 @@ class WxShareService extends ShareService {
     assert(scope != null);
     assert(state != null);
 
-    this._fluwx.sendAuth(fluwx.WeChatSendAuthModel(
+    fluwx.sendAuth(
       scope: scope,
       state: state,
-    ));
+    );
   }
 }
