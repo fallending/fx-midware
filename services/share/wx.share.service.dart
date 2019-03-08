@@ -24,12 +24,14 @@ class WxShareService extends ShareService {
     return fluwx.responseFromAuth;
   }
 
+  /**
+   * Fluwx目前只支持获取code，若要获取access_token请在服务器端完成。
+   *
+   * https://open.weixin.qq.com/cgi-bin/showdocument?action=doc&id=open1419317851&t=0.13712307643754684#0
+   * */
   @override
-  auth({String scope, String state}) {
+  auth({String scope: 'snsapi_base', String state: ''}) {
     super.auth();
-
-    assert(scope != null);
-    assert(state != null);
 
     fluwx.sendAuth(
       scope: scope,
